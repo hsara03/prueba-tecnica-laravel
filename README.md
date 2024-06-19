@@ -91,7 +91,6 @@ Durante el desarrollo del proyecto, se presentaron los siguientes problemas y se
 
 5. **Navegación en la aplicación**: El enlace de navegación para "Bookstore" no redirigía a la página de inicio. Se ajustaron las rutas y se modificó el layout principal para asegurar la correcta navegación.
 
-## Conclusión
 
 ## Conclusión
 
