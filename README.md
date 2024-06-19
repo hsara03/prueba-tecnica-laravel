@@ -1,3 +1,6 @@
+Claro, aquí tienes el README actualizado con un apartado para las capturas de pantalla:
+
+```markdown
 # Bookstore Project
 
 Este proyecto es una aplicación de gestión de una librería, desarrollada en Laravel, que permite realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre autores y libros. La aplicación incluye validaciones en el servidor y muestra mensajes de éxito para las operaciones realizadas.
@@ -91,7 +94,48 @@ Durante el desarrollo del proyecto, se presentaron los siguientes problemas y se
 
 5. **Navegación en la aplicación**: El enlace de navegación para "Bookstore" no redirigía a la página de inicio. Se ajustaron las rutas y se modificó el layout principal para asegurar la correcta navegación.
 
+## Capturas de Demostración
+
+A continuación se presentan algunas capturas de pantalla que demuestran las funcionalidades implementadas en el proyecto:
+
+1. **Página Principal**:
+![image](https://github.com/hsara03/prueba-tecnica-laravel/assets/92531022/6339e88a-9c72-47a4-9331-fb9a8d1b00dd)
+
+
+2. **Lista de Autores**:
+![image](https://github.com/hsara03/prueba-tecnica-laravel/assets/92531022/158b57a3-9296-4701-9735-db85ce3d45d2)
+
+
+3. **Crear Nuevo Autor**:
+![image](https://github.com/hsara03/prueba-tecnica-laravel/assets/92531022/4ee56b85-44b0-46b5-98c3-37b5f11f676a)
+![image](https://github.com/hsara03/prueba-tecnica-laravel/assets/92531022/7a1915f4-8cef-4493-b485-a85009625a7a)
+
+
+4. **Editar Autor**:
+![image](https://github.com/hsara03/prueba-tecnica-laravel/assets/92531022/06f90f42-c42e-4443-a185-5b3db2eefc27)
+![image](https://github.com/hsara03/prueba-tecnica-laravel/assets/92531022/59664fa2-67a0-41b4-a510-0522fbbcdf09)
+
+5. **Eliminar Autor**:
+![image](https://github.com/hsara03/prueba-tecnica-laravel/assets/92531022/3f2ce805-4f6b-4fb2-84b9-577434bdc3e1)
+
+6. **Lista de Libros**:
+![image](https://github.com/hsara03/prueba-tecnica-laravel/assets/92531022/c23e35b3-7fed-42d4-be92-6c0535a2f08f)
+
+
+7. **Crear Nuevo Libro**:
+![image](https://github.com/hsara03/prueba-tecnica-laravel/assets/92531022/95e44fb7-33ad-40f8-82ca-b0270005f64e)
+![image](https://github.com/hsara03/prueba-tecnica-laravel/assets/92531022/b64cdbe3-1a49-48fd-8e6b-78fdbbb7547e)
+
+
+8. **Editar Libro**:
+![image](https://github.com/hsara03/prueba-tecnica-laravel/assets/92531022/2a391e32-b08e-4b04-913d-bb286e19f06c)
+![image](https://github.com/hsara03/prueba-tecnica-laravel/assets/92531022/328ce281-5659-4fcb-b3e4-a8c8309555dd)
+
+9. **Eliminar Libro**:
+![image](https://github.com/hsara03/prueba-tecnica-laravel/assets/92531022/d8ca175c-13ad-4ead-b925-42864756a357)
+
 
 ## Conclusión
 
 A pesar de haber enfrentado algunos problemas menores, se pudieron corregir rápidamente, lo que permitió que el desarrollo avanzara sin mayores inconvenientes. El proyecto fue completado con éxito, cumpliendo con todos los requisitos solicitados. Este proceso me ha permitido aprender nuevas técnicas y aplicar conocimientos adquiridos durante mi carrera, lo cual ha sido muy gratificante. Me siento contento de haber podido desarrollar una solución efectiva y funcional para la gestión de una librería.
+
