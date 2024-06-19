@@ -1,6 +1,4 @@
-Claro, aquí tienes el README actualizado con un apartado para las capturas de pantalla:
 
-```markdown
 # Bookstore Project
 
 Este proyecto es una aplicación de gestión de una librería, desarrollada en Laravel, que permite realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre autores y libros. La aplicación incluye validaciones en el servidor y muestra mensajes de éxito para las operaciones realizadas.
