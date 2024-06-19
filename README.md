@@ -1,66 +1,98 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Bookstore Project
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Este proyecto es una aplicación de gestión de una librería, desarrollada en Laravel, que permite realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre autores y libros. La aplicación incluye validaciones en el servidor y muestra mensajes de éxito para las operaciones realizadas.
 
-## About Laravel
+## Características
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- **Gestión de Autores**:
+  - Crear un nuevo autor.
+  - Listar todos los autores.
+  - Editar un autor existente.
+  - Eliminar un autor.
+- **Gestión de Libros**:
+  - Crear un nuevo libro.
+  - Listar todos los libros.
+  - Editar un libro existente.
+  - Eliminar un libro.
+- **Validación de Formularios**: Validación en el servidor para todos los campos requeridos.
+- **Mensajes de Confirmación**: Mensajes de éxito tras realizar operaciones CRUD.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Instalación
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Sigue estos pasos para clonar e instalar el proyecto:
 
-## Learning Laravel
+1. Clona el repositorio:
+   ```sh
+   git clone https://github.com/tu_usuario/bookstore.git
+   cd bookstore
+   ```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+2. Instala las dependencias:
+   ```sh
+   composer install
+   npm install
+   npm run dev
+   ```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+3. Configura tu archivo `.env`:
+   ```sh
+   cp .env.example .env
+   php artisan key:generate
+   ```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+4. Configura la base de datos en tu archivo `.env` y ejecuta las migraciones:
+   ```sh
+   php artisan migrate
+   php artisan db:seed
+   ```
 
-## Laravel Sponsors
+5. Inicia el servidor:
+   ```sh
+   php artisan serve
+   ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+6. Accede a la aplicación en tu navegador:
+   ```
+   http://127.0.0.1:8000
+   ```
 
-### Premium Partners
+## Estructura del Proyecto
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+- `app/Http/Controllers`:
+  - `AuthorController.php`: Controlador para gestionar las operaciones CRUD de autores.
+  - `BookController.php`: Controlador para gestionar las operaciones CRUD de libros.
+  
+- `app/Models`:
+  - `Author.php`: Modelo del autor.
+  - `Book.php`: Modelo del libro.
 
-## Contributing
+- `resources/views`:
+  - `authors/index.blade.php`: Vista para listar los autores.
+  - `authors/create.blade.php`: Vista para crear un nuevo autor.
+  - `authors/edit.blade.php`: Vista para editar un autor.
+  - `books/index.blade.php`: Vista para listar los libros.
+  - `books/create.blade.php`: Vista para crear un nuevo libro.
+  - `books/edit.blade.php`: Vista para editar un libro.
+  - `layouts/app.blade.php`: Layout principal de la aplicación.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- `routes/web.php`: Rutas de la aplicación.
 
-## Code of Conduct
+## Problemas y Soluciones
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Durante el desarrollo del proyecto, se presentaron los siguientes problemas y se resolvieron de la siguiente manera:
 
-## Security Vulnerabilities
+1. **Problema con la relación entre libros y autores**: Inicialmente, no se había definido correctamente la relación en el modelo Book. Se añadió el método `author` en el modelo `Book` para definir la relación `belongsTo` con el modelo `Author`.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+2. **Validación de formularios**: Los formularios no mostraban correctamente los mensajes de validación. Se corrigió utilizando `@error` y `old` en las vistas de creación y edición.
 
-## License
+3. **Redireccionamiento y mensajes de éxito**: Después de realizar operaciones CRUD, los mensajes de éxito no se mostraban correctamente. Se resolvió utilizando `session('success')` en las vistas.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+4. **Error en el método PUT para la actualización**: Al principio, la ruta para la actualización no estaba definida correctamente. Se corrigió asegurándose de que el método PUT estuviera permitido en las rutas y formularios.
+
+5. **Navegación en la aplicación**: El enlace de navegación para "Bookstore" no redirigía a la página de inicio. Se ajustaron las rutas y se modificó el layout principal para asegurar la correcta navegación.
+
+## Conclusión
+
+## Conclusión
+
+A pesar de haber enfrentado algunos problemas menores, se pudieron corregir rápidamente, lo que permitió que el desarrollo avanzara sin mayores inconvenientes. El proyecto fue completado con éxito, cumpliendo con todos los requisitos solicitados. Este proceso me ha permitido aprender nuevas técnicas y aplicar conocimientos adquiridos durante mi carrera, lo cual ha sido muy gratificante. Me siento contento de haber podido desarrollar una solución efectiva y funcional para la gestión de una librería.
